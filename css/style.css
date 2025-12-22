@@ -112,6 +112,12 @@ header {
   font-size: var(--body-m);
   font-weight: var(--body-m);
 
+  transition: all 0.3s 0.23s ease-in-out;
+
+  &.active {
+    background-color: rgba(255, 255, 255, 1);
+  }
+
   a {
     display: block;
   }
@@ -160,27 +166,36 @@ header {
     z-index: -1;
     display: flex;
     flex-wrap: wrap;
+    gap: 2rem 0;
     justify-content: center;
     width: 100%;
     overflow: hidden;
     background: var(--white);
-    padding: 8rem 21rem 8rem;
+    padding: 8rem 0;
     box-sizing: border-box;
 
-    transition: all 0.3s;
+    transition: all 0.3s ease-in-out;
     opacity: 0;
     visibility: hidden;
+    color: var(--white);
+    transform: translateY(-100%);
 
     &.active {
       opacity: 1;
       visibility: visible;
+      color: var(--black);
+    }
+
+    &.flyout {
+      transform: translateY(0%);
+      transition: transform 0.3s, color 0.1s;
+      transition-timing-function: ease-in-out;
     }
 
     .submenu__link {
       font-size: var(--body-l);
       font-weight: var(--bodyStrong);
       opacity: 0.75;
-      transition: all 0.2s;
 
       &:hover {
         opacity: 1;
@@ -191,13 +206,22 @@ header {
       padding: 0 2rem;
     }
 
-    a.beforeAni {
-      transform: translateY(2rem);
-      opacity: 0;
-    }
-
     a {
       position: relative;
+      transition: opacity 0.3s, transform 0.3s;
+      transition-delay: var(--headerTextDelay);
+      transition-timing-function: ease-in-out;
+
+      &.beforeAni {
+        transform: translateY(2rem);
+        opacity: 0;
+        transition-delay: 0s;
+      }
+
+      &.afterAni {
+        transition: all 0.2s;
+      }
+
       &::before {
         content: "";
         display: block;
@@ -235,7 +259,6 @@ header {
 
     .submenu__depth3-link {
       opacity: 0.75;
-      transition: all 0.2s;
 
       &:hover {
         opacity: 1;
@@ -259,6 +282,7 @@ header {
   position: fixed;
   inset: 0 0 0 0;
   z-index: 10;
+  pointer-events: none;
 
   background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(20px);
