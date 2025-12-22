@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <h1 class="hidden">3M Science. Applied to Life</h1>
-    <header>
+    <h1 class="blind">3M Science. Applied to Life</h1>
+    <header class="header">
       <div class="header__inner">
-        <a class="logo">
+        <a href="#" class="header__logo">
           <div class="svg-box">
             <svg width="46" viewBox="0 0 46 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -22,136 +22,137 @@
             </svg>
           </div>
         </a>
-        <nav class="menu-box">
-          <ul class="menu">
+        <!-- gnb -->
+        <nav class="header__nav gnb">
+          <ul class="gnb__list">
             <!-- product -->
-            <li>
-              <a href="#">
+            <li class="gnb__item">
+              <a href="#" class="gnb__link" title="제품">
                 <span>제품</span>
               </a>
               <ul class="submenu">
-                <li>
-                  <a href="#">가정 & 사무실</a>
-                  <ul>
-                    <li><a href="#">가정용품</a></li>
-                    <li><a href="#">사무용품</a></li>
-                    <li><a href="#">청소 및 세척용품</a></li>
-                    <li><a href="#">라벨</a></li>
+                <li class="submenu__item">
+                  <a href="#" class="submenu__link" title="가정 & 사무실">가정 & 사무실</a>
+                  <ul class="submenu__depth3">
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="가정용품">가정용품</a></li>
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="사무용품">사무용품</a></li>
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="청소 및 세척용품">청소 및 세척용품</a></li>
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="라벨">라벨</a></li>
                   </ul>
                 </li>
-                <li>
-                  <a href="#">의료 & 헬스케어</a>
-                  <ul>
-                    <li><a href="#">의료용 제품</a></li>
-                    <li><a href="#">덴탈 및 교정</a></li>
+                <li class="submenu__item">
+                  <a href="#" class="submenu__link" title="의료 & 헬스케어">의료 & 헬스케어</a>
+                  <ul class="submenu__depth3">
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="의료용 제품">의료용 제품</a></li>
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="덴탈 및 교정">덴탈 및 교정</a></li>
                   </ul>
                 </li>
-                <li>
-                  <a href="#">건축 & 건설자재</a>
-                  <ul>
-                    <li><a href="#">건축자재</a></li>
-                    <li><a href="#">인슐레이션</a></li>
-                    <li><a href="#">전기 공사 솔루션</a></li>
-                    <li><a href="#">표지판 및 차선</a></li>
+                <li class="submenu__item">
+                  <a href="#" class="submenu__link" title="건축 & 건설자재">건축 & 건설자재</a>
+                  <ul class="submenu__depth3">
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="건축자재">건축자재</a></li>
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="인슐레이션">인슐레이션</a></li>
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="전기 공사 솔루션">전기 공사 솔루션</a></li>
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="표지판 및 차선">표지판 및 차선</a></li>
                   </ul>
                 </li>
-                <li>
-                  <a href="#">산업용 소재</a>
-                  <ul>
-                    <li><a href="#">테이프</a></li>
-                    <li><a href="#">접착제, 실란트 및 충전제</a></li>
-                    <li><a href="#">필름 및 시트지</a></li>
-                    <li><a href="#">코팅제</a></li>
-                    <li><a href="#">컴파운드 및 광택제</a></li>
-                    <li><a href="#">윤활제</a></li>
-                    <li><a href="#">연마재</a></li>
+                <li class="submenu__item">
+                  <a href="#" class="submenu__link" title="산업용 소재">산업용 소재</a>
+                  <ul class="submenu__depth3">
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="테이프">테이프</a></li>
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="접착제, 실란트 및 충전제">접착제, 실란트 및 충전제</a></li>
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="필름 및 시트지">필름 및 시트지</a></li>
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="코팅제">코팅제</a></li>
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="컴파운드 및 광택제">컴파운드 및 광택제</a></li>
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="윤활제">윤활제</a></li>
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="연마재">연마재</a></li>
                   </ul>
                 </li>
-                <li>
-                  <a href="#">산업 솔루션</a>
-                  <ul>
-                    <li><a href="#">전자부품</a></li>
-                    <li><a href="#">개인안전보호구</a></li>
-                    <li><a href="#">첨단소재</a></li>
-                    <li><a href="#">공구 및 장비</a></li>
-                    <li><a href="#">자동차 부품 및 하드웨어</a></li>
+                <li class="submenu__item">
+                  <a href="#" class="submenu__link" title="산업 솔루션">산업 솔루션</a>
+                  <ul class="submenu__depth3">
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="전자부품">전자부품</a></li>
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="개인안전보호구">개인안전보호구</a></li>
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="첨단소재">첨단소재</a></li>
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="공구 및 장비">공구 및 장비</a></li>
+                    <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="자동차 부품 및 하드웨어">자동차 부품 및 하드웨어</a></li>
                   </ul>
                 </li>
               </ul>
             </li>
             <!-- product end -->
             <!-- industry -->
-            <li>
-              <a href="#">
+            <li class="gnb__item">
+              <a href="#" class="gnb__link" title="산업">
                 <span>산업</span>
               </a>
               <ul class="submenu">
-                <li><a href="#">교통 및 운송</a></li>
-                <li><a href="#">디자인 및 시공</a></li>
-                <li><a href="#">상업용 솔루션</a></li>
-                <li><a href="#">소비자 시장</a></li>
-                <li><a href="#">안전</a></li>
-                <li><a href="#">에너지</a></li>
-                <li><a href="#">자동차</a></li>
-                <li><a href="#">전자</a></li>
-                <li><a href="#">제조</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="교통 및 운송">교통 및 운송</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="디자인 및 시공">디자인 및 시공</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="상업용 솔루션">상업용 솔루션</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="소비자 시장">소비자 시장</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="안전">안전</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="에너지">에너지</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="자동차">자동차</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="전자">전자</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="제조">제조</a></li>
               </ul>
             </li>
             <!-- industry end -->
             <!-- brand -->
-            <li>
-              <a href="#">
+            <li class="gnb__item">
+              <a href="#" class="gnb__link" title="브랜드">
                 <span>브랜드</span>
               </a>
               <ul class="submenu">
-                <li><a href="#">Clarity</a></li>
-                <li><a href="#">Nexcare</a></li>
-                <li><a href="#">Tegaderm</a></li>
-                <li><a href="#">DI-NOC</a></li>
-                <li><a href="#">PELTOR</a></li>
-                <li><a href="#">VHB™</a></li>
-                <li><a href="#">FUTURO</a></li>
-                <li><a href="#">Scotchlite</a></li>
-                <li><a href="#">Scotch-Weld™</a></li>
-                <li><a href="#">Lava</a></li>
-                <li><a href="#">Speedglas</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="Clarity">Clarity</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="Nexcare">Nexcare</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="Tegaderm">Tegaderm</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="DI-NOC">DI-NOC</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="PELTOR">PELTOR</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="VHB™">VHB™</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="FUTURO">FUTURO</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="Scotchlite">Scotchlite</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="Scotch-Weld™">Scotch-Weld™</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="Lava">Lava</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="Speedglas">Speedglas</a></li>
               </ul>
             </li>
             <!-- brand end -->
             <!-- company profile -->
-            <li>
-              <a href="#">
+            <li class="gnb__item">
+              <a href="#" class="gnb__link" title="회사소개">
                 <span>회사소개</span>
               </a>
               <ul class="submenu">
-                <li><a href="#">한국쓰리엠 소개</a></li>
-                <li><a href="#">채용정보</a></li>
-                <li><a href="#">투자자 관계(IR)</a></li>
-                <li><a href="#">대리점 및 협력업체</a></li>
-                <li><a href="#">테크놀로지</a></li>
-                <li><a href="#">고객기술센터</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="한국쓰리엠 소개">한국쓰리엠 소개</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="채용정보">채용정보</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="투자자 관계(IR)">투자자 관계(IR)</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="대리점 및 협력업체">대리점 및 협력업체</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="테크놀로지">테크놀로지</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="고객기술센터">고객기술센터</a></li>
               </ul>
             </li>
             <!-- company profile end -->
             <!-- news -->
-            <li>
-              <a href="#">
+            <li class="gnb__item">
+              <a href="#" class="gnb__link" title="뉴스">
                 <span>뉴스</span>
               </a>
               <ul class="submenu">
-                <li><a href="#">뉴스센터</a></li>
-                <li><a href="#">공지사항</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="뉴스센터">뉴스센터</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="공지사항">공지사항</a></li>
               </ul>
             </li>
             <!-- news end -->
             <!-- customer -->
-            <li>
-              <a href="#">
+            <li class="gnb__item">
+              <a href="#" class="gnb__link" title="고객지원">
                 <span>고객지원</span>
               </a>
               <ul class="submenu">
-                <li><a href="#">고객센터</a></li>
-                <li><a href="#">사이트 맵</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="고객센터">고객센터</a></li>
+                <li class="submenu__item"><a href="#" class="submenu__link" title="사이트 맵">사이트 맵</a></li>
               </ul>
             </li>
             <!-- customer end -->
@@ -160,9 +161,9 @@
         <!-- gnb end -->
         <!-- utility -->
         <div class="header__util">
-          <a href="#" class="lang-select">한국어</a>
-          <button type="button" class="btn-search">
-            <span class="hidden">검색</span>
+          <a href="#" class="header__util-item lang-select">한국어</a>
+          <button type="button" class="header__util-item btn-search">
+            <span class="blind">검색</span>
             <i class="icon-search svg-box">
               <svg width="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -173,11 +174,15 @@
             </i>
           </button>
         </div>
+        <!-- utility end -->
       </div>
     </header>
-    <main></main>
+    <div class="header__bg"></div>
+    <main>
+      <div class="blank" style="height: 300vh; background-color: aquamarine"></div>
+    </main>
     <footer></footer>
 
-    <script type="module" src="script.js"></script>
+    <script type="module" src="./script.js"></script>
   </body>
 </html>
