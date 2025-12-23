@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>3M Science. Applied to Life</title>
 
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+
+    <!-- css -->
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
@@ -31,6 +35,7 @@
                 <span>제품</span>
               </a>
               <ul class="submenu">
+                <li class="submenu__item-text"><h2>3M 제품군</h2></li>
                 <li class="submenu__item">
                   <a href="#" class="submenu__link" title="가정 & 사무실">가정 & 사무실</a>
                   <ul class="submenu__depth3">
@@ -78,6 +83,9 @@
                     <li class="submenu__depth3-item"><a href="#" class="submenu__depth3-link" title="자동차 부품 및 하드웨어">자동차 부품 및 하드웨어</a></li>
                   </ul>
                 </li>
+                <li class="submenu__item">
+                  <a href="#" class="submenu__link" title="전체보기">전체보기</a>
+                </li>
               </ul>
             </li>
             <!-- product end -->
@@ -87,6 +95,7 @@
                 <span>산업</span>
               </a>
               <ul class="submenu">
+                <li class="submenu__item-text"><h2>서비스중인 산업 솔루션들</h2></li>
                 <li class="submenu__item"><a href="#" class="submenu__link" title="교통 및 운송">교통 및 운송</a></li>
                 <li class="submenu__item"><a href="#" class="submenu__link" title="디자인 및 시공">디자인 및 시공</a></li>
                 <li class="submenu__item"><a href="#" class="submenu__link" title="상업용 솔루션">상업용 솔루션</a></li>
@@ -105,6 +114,7 @@
                 <span>브랜드</span>
               </a>
               <ul class="submenu">
+                <li class="submenu__item-text"><h2>3M 전체 브랜드</h2></li>
                 <li class="submenu__item"><a href="#" class="submenu__link" title="Clarity">Clarity</a></li>
                 <li class="submenu__item"><a href="#" class="submenu__link" title="Nexcare">Nexcare</a></li>
                 <li class="submenu__item"><a href="#" class="submenu__link" title="Tegaderm">Tegaderm</a></li>
@@ -125,6 +135,7 @@
                 <span>회사소개</span>
               </a>
               <ul class="submenu">
+                <li class="submenu__item-text"><h2>3M Science. Applied to Life</h2></li>
                 <li class="submenu__item"><a href="#" class="submenu__link" title="한국쓰리엠 소개">한국쓰리엠 소개</a></li>
                 <li class="submenu__item"><a href="#" class="submenu__link" title="채용정보">채용정보</a></li>
                 <li class="submenu__item"><a href="#" class="submenu__link" title="투자자 관계(IR)">투자자 관계(IR)</a></li>
@@ -140,6 +151,7 @@
                 <span>뉴스</span>
               </a>
               <ul class="submenu">
+                <li class="submenu__item-text"><h2>3M 뉴스룸</h2></li>
                 <li class="submenu__item"><a href="#" class="submenu__link" title="뉴스센터">뉴스센터</a></li>
                 <li class="submenu__item"><a href="#" class="submenu__link" title="공지사항">공지사항</a></li>
               </ul>
@@ -151,6 +163,7 @@
                 <span>고객지원</span>
               </a>
               <ul class="submenu">
+                <li class="submenu__item-text"><h2>고객지원</h2></li>
                 <li class="submenu__item"><a href="#" class="submenu__link" title="고객센터">고객센터</a></li>
                 <li class="submenu__item"><a href="#" class="submenu__link" title="사이트 맵">사이트 맵</a></li>
               </ul>
@@ -178,16 +191,124 @@
       </div>
     </header>
     <div class="header__bg"></div>
+    <!-- header end -->
     <main>
+      <!-- hero section -->
       <section class="hero-section">
         <h2 class="blind">랜딩 페이지</h2>
-        <div class="content-wrap"></div>
+        <div class="content-wrap">
+          <div class="visual-box">
+            <div class="visual-box__left swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide slide">
+                  <div class="slide__inner">
+                    <div class="slide__img img-box"><img src="images/main_swiper-1.png" alt="" /></div>
+                    <div class="slide__content">
+                      <h3 class="slide__title">과학으로 더 나은 세상을</h3>
+                      <p class="slide__desc">A Better World Through Science</p>
+                      <div class="slide__button-wrap">
+                        <a href="#" class="slide__button button__st-1"><span class="button__st-1-text">더 알아보기</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-btns">
+                <div class="swiper-btns__prev">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.975 22L17.75 20.225L9.525 12L17.75 3.775L15.975 2L5.975 12L15.975 22Z" fill="currentColor" />
+                  </svg>
+                </div>
+                <div class="swiper-btns__next">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2L18.025 12L8.025 22Z" fill="currentColor" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="visual-box__right">
+              <div class="visual-box__sub-swiper swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide slide">
+                    <div class="slide__inner">
+                      <div class="slide__img img-box"><img src="images/sub_swiper-1.webp" alt="" /></div>
+                      <div class="slide__content">
+                        <p class="slide__desc">Resource Center</p>
+                        <h3 class="slide__title-small">기업지배구조보고서</h3>
+                        <div class="slide__button-wrap">
+                          <a href="#" class="slide__button button__st-1"><span class="button__st-1-text">더 알아보기</span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-btns">
+                  <div class="swiper-btns__prev">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15.975 22L17.75 20.225L9.525 12L17.75 3.775L15.975 2L5.975 12L15.975 22Z" fill="currentColor" />
+                    </svg>
+                  </div>
+                  <div class="swiper-btns__next">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M8.025 22L6.25 20.225L14.475 12L6.25 3.775L8.025 2L18.025 12L8.025 22Z" fill="currentColor" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <article class="stock-box">
+                <div class="stock-box__inner">
+                  <div class="stock-box__top">
+                    <div class="stock-box__title">주가정보</div>
+                    <div class="stock-box__ticker"><strong>3M</strong> (NYSE: MMM)</div>
+                  </div>
+                  <div class="stock-box__bottom">
+                    <div class="stock-box__price">170.48</div>
+                    <div class="stock-box__currency">USD</div>
+                    <div class="stock-box__delta">−0.080</div>
+                    <div class="stock-box__delta-percent">0.047%</div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <section class="search-box">
+            <h2 class="search-box__title">찾고 싶은 제품을 검색하세요</h2>
+            <div class="search-box__inner">
+              <form class="search-box__form" id="search-box">
+                <input type="text" name="saerch" class="search-box__field" placeholder="어떤 제품을 찾고 계신가요?" />
+                <button class="search-box__button">
+                  <span class="blind">검색</span>
+                  <i class="search-box__icon svg-box">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.6 21L13.3 14.7C12.8 15.1 12.225 15.4167 11.575 15.65C10.925 15.8833 10.2333 16 9.5 16C7.68333 16 6.14583 15.3708 4.8875 14.1125C3.62917 12.8542 3 11.3167 3 9.5C3 7.68333 3.62917 6.14583 4.8875 4.8875C6.14583 3.62917 7.68333 3 9.5 3C11.3167 3 12.8542 3.62917 14.1125 4.8875C15.3708 6.14583 16 7.68333 16 9.5C16 10.2333 15.8833 10.925 15.65 11.575C15.4167 12.225 15.1 12.8 14.7 13.3L21 19.6L19.6 21ZM9.5 14C10.75 14 11.8125 13.5625 12.6875 12.6875C13.5625 11.8125 14 10.75 14 9.5C14 8.25 13.5625 7.1875 12.6875 6.3125C11.8125 5.4375 10.75 5 9.5 5C8.25 5 7.1875 5.4375 6.3125 6.3125C5.4375 7.1875 5 8.25 5 9.5C5 10.75 5.4375 11.8125 6.3125 12.6875C7.1875 13.5625 8.25 14 9.5 14Z"
+                        fill="currentColor"
+                      />
+                    </svg>
+                  </i>
+                </button>
+              </form>
+              <div class="search-box__tag-box">
+                <button class="button__tag" button-style="ghost"><span class="blind">셀프인테리어</span>셀프인테리어</button>
+                <button class="button__tag" button-style="ghost"><span class="blind">데스크테리어</span>데스크테리어</button>
+                <button class="button__tag" button-style="ghost"><span class="blind">상처케어</span>상처케어</button>
+                <button class="button__tag" button-style="ghost"><span class="blind">차량관리</span>차량관리</button>
+                <button class="button__tag" button-style="ghost"><span class="blind">미세먼지필터</span>미세먼지필터</button>
+                <button class="button__tag" button-style="ghost"><span class="blind">새학기준비</span>새학기준비</button>
+                <button class="button__tag" button-style="ghost"><span class="blind">홈오피스</span>홈오피스</button>
+                <button class="button__tag" button-style="ghost"><span class="blind">캠핑용품</span>캠핑용품</button>
+              </div>
+            </div>
+          </section>
+        </div>
       </section>
 
       <div class="blank" style="height: 300vh; background-color: dimgray"></div>
     </main>
     <footer></footer>
 
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script type="module" src="./script.js"></script>
   </body>
 </html>

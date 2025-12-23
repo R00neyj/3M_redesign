@@ -5,36 +5,46 @@ const headerHover = () => {
   const headerEl = document.querySelector(".header");
   const alinks = document.querySelectorAll(".submenu a");
 
-  alinks.forEach((a) => a.classList.add("beforeAni"));
-
+  //   set transition delay on a tag
   submenus.forEach((el) => {
     el.querySelectorAll("a").forEach((a, index) => {
+      a.classList.add("beforeAni");
       a.style.setProperty("--headerTextDelay", `${index * 10 + 200}ms`);
-      // a.style.transitionDelay = `${index * 20}ms`;
     });
   });
 
-  let textTimer;
-
   gnbItems.forEach((gnbItem, index) => {
     gnbItem.addEventListener("pointerenter", () => {
-      headerEl.classList.add("active");
-      headerBg.classList.add("active");
-      submenus.forEach((el) => el.classList.remove("active"));
-      submenus[index].classList.add("active");
-      submenus.forEach((el) => el.classList.add("flyout"));
-      alinks.forEach((a) => {
-        a.classList.remove("beforeAni");
-
-        textTimer = setTimeout(() => {
-          clearTimeout(textTimer);
-          a.classList.add("afterAni");
-        }, 300);
-      });
+      handlerEnter(index);
     });
   });
 
   headerEl.addEventListener("pointerleave", () => {
+    handlerLeave();
+  });
+
+  let textTimer;
+  const handlerEnter = (index) => {
+    headerEl.classList.add("active");
+    headerBg.classList.add("active");
+    submenus.forEach((el) => {
+      el.classList.remove("active");
+      el.classList.add("flyout");
+    });
+    submenus[index].classList.add("active");
+
+    // removing beforeAni to prevent ani being play again
+    // timeout to wait while the animation plays
+    alinks.forEach((a) => {
+      a.classList.remove("beforeAni");
+      textTimer = setTimeout(() => {
+        clearTimeout(textTimer);
+        a.classList.add("afterAni");
+      }, 300);
+    });
+  };
+
+  const handlerLeave = () => {
     submenus.forEach((el) => {
       el.classList.remove("flyout");
       el.classList.remove("active");
@@ -45,7 +55,7 @@ const headerHover = () => {
       a.classList.add("beforeAni");
       a.classList.remove("afterAni");
     });
-  });
+  };
 };
 
 headerHover();

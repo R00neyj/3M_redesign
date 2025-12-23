@@ -96,3 +96,17 @@ a {
 button {
   background-color: inherit;
 }
+input {
+  display: block;
+  padding: 0;
+  margin: 0;
+  padding-block: 0;
+  padding-inline: 0;
+  margin-block: 0;
+  margin-inline: 0;
+  border: none;
+  font: inherit;
+}
+input:focus {
+  outline: none;
+}
