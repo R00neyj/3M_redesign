@@ -5,7 +5,7 @@ const headerHover = () => {
   const headerEl = document.querySelector(".header");
   const alinks = document.querySelectorAll(".submenu a");
 
-  //   set transition delay on a tag
+  //   set transition delay on a-tag
   submenus.forEach((el) => {
     el.querySelectorAll("a").forEach((a, index) => {
       a.classList.add("beforeAni");
