@@ -58,77 +58,34 @@ const headerHover = () => {
   };
 };
 
+const swiper__init = () => {
+  const collectionSwiper = new Swiper(".collection__swiper", {
+    slidesPerView: 2,
+    spaceBetween: 40,
+    navigation: {
+      nextEl: ".section-collection .swiper-btns__next",
+      prevEl: ".section-collection .swiper-btns__prev",
+    },
+  });
+
+  const bestSwiper = new Swiper(".best__swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".section-best .swiper-btns__next",
+      prevEl: ".section-best .swiper-btns__prev",
+    },
+  });
+
+  const newsSwiper = new Swiper(".news__swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".section-news .swiper-btns__next",
+      prevEl: ".section-news .swiper-btns__prev",
+    },
+  });
+};
+
 headerHover();
-
-// trash
-// const gnbItem = document.querySelectorAll(".gnb__item");
-//   const headerBg = document.querySelector(".header__bg");
-//   const submenuEl = document.querySelectorAll(".submenu");
-//   const headerEl = document.querySelector(".header");
-
-//   gnbItem.forEach((el, index) => {
-//     const flyoutEl = el.querySelectorAll(".submenu a");
-
-//     el.addEventListener("pointerenter", () => {
-//       whenPointerEnter(index, flyoutEl);
-//     });
-//     // el.addEventListener("pointerleave", () => {
-//     //   let submenu = el.querySelector(".submenu");
-//     //   whenPointerLeave(submenu);
-//     // });
-//   });
-
-//   submenuEl.forEach((el) => {
-//     el.addEventListener("pointerleave", () => {
-//       whenPointerLeave(el);
-//     });
-//   });
-
-//   const whenPointerEnter = (index, flyout) => {
-//     headerEl.classList.add("active");
-//     submenuEl.forEach((el) => {
-//       el.classList.remove("active");
-//       el.classList.add("flyout");
-//     });
-//     submenuEl[index].classList.add("active");
-//     headerBg.classList.add("active");
-//     flyout.forEach((el2) => {
-//       el2.classList.remove("beforeAni");
-//     });
-//     let resetTimer;
-//     resetTimer = setTimeout(() => {
-//       clearTimeout(resetTimer);
-//       resetTransition();
-//     }, 300);
-//   };
-
-//   const whenPointerLeave = (el) => {
-//     headerEl.classList.remove("active");
-//     el.classList.remove("active");
-//     headerBg.classList.remove("active");
-//     el.querySelectorAll("a").forEach((el) => el.classList.add("beforeAni"));
-//     submenuEl.forEach((el) => el.classList.remove("flyout"));
-//     let setTimer;
-//     setTimer = setTimeout(() => {
-//       clearTimeout(setTimer);
-//       setTransition();
-//     }, 300);
-//   };
-
-//   const setTransition = () => {
-//     gnbItem.forEach((el) => {
-//       const flyoutEl = el.querySelectorAll(".submenu a");
-//       flyoutEl.forEach((el2, index) => {
-//         el2.classList.add("beforeAni");
-//         el2.style.transition = `opacity .3s ${index * 10 + 200}ms, transform .3s ${index * 10 + 200}ms`;
-//       });
-//     });
-//   };
-
-//   setTransition();
-//   const resetTransition = () => {
-//     gnbItem.forEach((el) => {
-//       const flyoutEl = el.querySelectorAll(".submenu a");
-//       flyoutEl.forEach((el2, index) => (el2.style.transition = `initial`));
-//     });
-//   };
+swiper__init();
