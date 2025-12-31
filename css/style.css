@@ -108,6 +108,10 @@ button {
   line-height: 1.3;
 }
 
+.slide__inner {
+  display: block;
+}
+
 /* --------------- component --------------- */
 
 /* --------------- btn-st-1 --------------- */
