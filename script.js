@@ -86,47 +86,49 @@ const swiper__init = () => {
     },
   });
 };
+const businessButton__Ani = () => {
+  const gridItems = document.querySelectorAll(".section-business .grid__item > .item__inner");
+
+  gridItems.forEach((item) => {
+    item.addEventListener("mouseenter", (e) => {
+      const w = item.offsetWidth;
+      const x = e.offsetX;
+      const direction = x > w / 2 ? "right" : "left";
+
+      item.classList.remove("active", "pos-left", "pos-right");
+
+      item.classList.add("no-trans");
+      if (direction === "left") {
+        item.classList.add("pos-left");
+      } else {
+        item.classList.add("pos-right");
+      }
+
+      // raf 두번써서 애니메이션 씹힘 방지
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          item.classList.remove("no-trans");
+          item.classList.add("active");
+        });
+      });
+    });
+
+    item.addEventListener("mouseleave", (e) => {
+      const w = item.offsetWidth;
+      const x = e.offsetX;
+      const direction = x > w / 2 ? "right" : "left";
+      item.classList.remove("active");
+
+      item.classList.remove("pos-left", "pos-right");
+      if (direction === "left") {
+        item.classList.add("pos-left");
+      } else {
+        item.classList.add("pos-right");
+      }
+    });
+  });
+};
 
 headerHover();
 swiper__init();
-
-const gridItems = document.querySelectorAll(".section-business .grid__item > .item__inner");
-
-gridItems.forEach((item) => {
-  item.addEventListener("mouseenter", (e) => {
-    const w = item.offsetWidth;
-    const x = e.offsetX;
-    const direction = x > w / 2 ? "right" : "left";
-
-    item.classList.remove("active", "pos-left", "pos-right");
-
-    item.classList.add("no-trans");
-    if (direction === "left") {
-      item.classList.add("pos-left");
-    } else {
-      item.classList.add("pos-right");
-    }
-
-    // raf 두번써서 애니메이션 씹힘 방지
-    requestAnimationFrame(() => {
-      requestAnimationFrame(() => {
-        item.classList.remove("no-trans");
-        item.classList.add("active");
-      });
-    });
-  });
-
-  item.addEventListener("mouseleave", (e) => {
-    const w = item.offsetWidth;
-    const x = e.offsetX;
-    const direction = x > w / 2 ? "right" : "left";
-    item.classList.remove("active");
-
-    item.classList.remove("pos-left", "pos-right");
-    if (direction === "left") {
-      item.classList.add("pos-left");
-    } else {
-      item.classList.add("pos-right");
-    }
-  });
-});
+businessButton__Ani();

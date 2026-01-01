@@ -66,6 +66,10 @@
   --title: 700;
   --title-m: 4rem;
   --title-xl: 8rem;
+
+  /* custom easing */
+  --ease-out: cubic-bezier(0, 0, 0.5, 1);
+  --ease-in-out: cubic-bezier(0.5, 0, 0.5, 1);
 }
 
 /* libs */
@@ -126,7 +130,7 @@ button {
   background-color: var(--white);
   color: var(--black);
   border-radius: 9.9rem;
-  transition: all 0.27s ease-in-out;
+  transition: all 0.33s var(--ease-in-out);
   overflow: hidden;
   box-sizing: border-box;
 
@@ -187,7 +191,7 @@ button {
   box-sizing: border-box;
   border-radius: 0.4rem;
   background-color: var(--dimWhite);
-  transition: all 0.27s ease-in-out;
+  transition: all 0.27s var(--ease-out);
 
   &::before {
     content: "#";
@@ -234,7 +238,7 @@ button {
   overflow: hidden;
   border-radius: 2.4rem;
   border: 1px solid var(--darkGray);
-  transition: all 0.24s ease-in-out;
+  transition: all 0.24s var(--ease-out);
 
   &:hover {
     background-color: var(--dimWhite);
@@ -256,7 +260,7 @@ button {
       width: 100%;
       aspect-ratio: 1/1;
       object-fit: cover;
-      transition: all 0.2s ease-in-out;
+      transition: all 0.2s var(--ease-out);
     }
   }
 
@@ -322,7 +326,7 @@ button {
       border-radius: 9rem;
       box-sizing: border-box;
       border: 1px solid var(--darkGray);
-      transition: all 0.2s ease-in-out;
+      transition: all 0.2s var(--ease-out);
 
       &:hover {
         background-color: var(--black);
@@ -349,7 +353,7 @@ button {
   border: 1px solid var(--darkGray);
   box-sizing: border-box;
   margin: 1px;
-  transition: background-color 0.24s ease-in-out;
+  transition: background-color 0.24s var(--ease-out);
 
   &:hover {
     background-color: var(--dimWhite);
@@ -362,7 +366,7 @@ button {
     overflow: hidden;
     img {
       aspect-ratio: 1/1;
-      transition: transform 0.2s ease-in-out;
+      transition: transform 0.2s var(--ease-out);
     }
   }
 
@@ -424,7 +428,7 @@ button {
       inset: 0 0 0 0;
       background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 1));
       opacity: 0.7;
-      transition: opacity 0.3s ease-in-out;
+      transition: opacity 0.3s var(--ease-out);
     }
   }
 
@@ -468,7 +472,7 @@ button {
   padding: 1rem;
   cursor: pointer;
   line-height: 0;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.2s var(--ease-out);
   border-radius: 0.4rem;
 
   &:hover {
@@ -512,7 +516,7 @@ header {
   font-size: var(--body-m);
   font-weight: var(--body-m);
 
-  transition: all 0.3s 0.23s ease-in-out;
+  transition: all 0.3s 0.23s var(--ease-out);
 
   &.active {
     background-color: rgba(255, 255, 255, 1);
@@ -575,7 +579,7 @@ header {
     padding: 12rem 0 7rem;
     box-sizing: border-box;
 
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s var(--ease-out);
     opacity: 0;
     visibility: hidden;
     color: var(--white);
@@ -595,7 +599,7 @@ header {
     &.flyout {
       transform: translateY(0%);
       transition: transform 0.3s, color 0.1s;
-      transition-timing-function: ease-in-out;
+      transition-timing-function: var(--ease-out);
 
       .submenu__item-text {
         opacity: 1;
@@ -632,7 +636,7 @@ header {
       position: relative;
       transition: opacity 0.3s, transform 0.3s;
       transition-delay: var(--headerTextDelay);
-      transition-timing-function: ease-in-out;
+      transition-timing-function: var(--ease-out);
 
       &.beforeAni {
         transform: translateY(2rem);
@@ -776,7 +780,7 @@ main {
     background-color: var(--dimWhite);
     padding: 4rem;
     box-sizing: border-box;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s var(--ease-out);
     border: 1px solid transparent;
 
     &:hover {
@@ -839,7 +843,7 @@ main {
       z-index: 1;
       background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
       opacity: 0.5;
-      transition: all 0.6s ease-in-out;
+      transition: all 0.6s var(--ease-out);
     }
 
     &:hover {
@@ -929,7 +933,7 @@ main {
     background-color: var(--dimWhite);
     border-radius: 9.9rem;
     opacity: 0.8;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s var(--ease-out);
     border: 2px solid transparent;
     box-sizing: border-box;
 
@@ -1012,7 +1016,7 @@ main {
   .brand__logo-box {
     outline: 1px solid var(--lightGray);
     border-radius: 1.8rem;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s var(--ease-out);
 
     &:hover {
       background-color: var(--dimWhite);
@@ -1064,7 +1068,7 @@ main {
       height: 100%;
       filter: brightness(0.5);
       max-height: 30rem;
-      transition: transform 0.25s ease-in-out;
+      transition: transform 0.25s var(--ease-out);
     }
   }
   .logo-box {
@@ -1172,14 +1176,18 @@ main {
 
 .section-news .swiper-btns__prev {
   position: absolute;
-  bottom: 18rem;
+  bottom: 40%;
   left: -8rem;
 }
 
 .section-news .swiper-btns__next {
   position: absolute;
-  bottom: 18rem;
+  bottom: 40%;
   right: -8rem;
+}
+
+.section-news .button__st-1 {
+  margin: 4rem auto 0;
 }
 
 /* -------------------- section business -------------------- */
@@ -1213,7 +1221,7 @@ main {
     min-height: 17rem;
     border: 4px solid var(--white);
     overflow: hidden;
-    transition: all 0.34s ease-in-out;
+    transition: all 0.34s var(--ease-in-out);
 
     &::after {
       content: "";
@@ -1225,6 +1233,7 @@ main {
       height: 34rem;
       background-color: var(--primary);
       border-radius: 50%;
+      filter: blur(3px);
       z-index: 1;
       pointer-events: none;
       opacity: 0;
@@ -1234,9 +1243,11 @@ main {
 
     &.pos-left::after {
       transform: translate(-50%, -50%) translateX(-100%);
+      opacity: 0.5;
     }
     &.pos-right::after {
       transform: translate(-50%, -50%) translateX(100%);
+      opacity: 0.5;
     }
 
     &.no-trans::after {
@@ -1280,3 +1291,126 @@ main {
     transition: inherit;
   }
 }
+
+.section-business .button__st-1 {
+  margin: 4rem auto 0;
+}
+
+/* -------------------- main end -------------------- */
+
+/* -------------------- footer -------------------- */
+footer {
+  padding: 8rem 0 2rem;
+  background-color: var(--dimWhite);
+  a {
+    display: inline-block;
+  }
+}
+
+.footer__menu {
+  display: flex;
+  justify-content: space-between;
+
+  .menu__item {
+    font-weight: 500;
+    color: #333;
+  }
+
+  li > a {
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -1.2rem;
+      top: 50%;
+      width: 0.6rem;
+      height: 0.6rem;
+      background-color: var(--primary);
+      transform: translate(0.5rem, -50%);
+      border-radius: 9rem;
+
+      transition: all 0.2s;
+      opacity: 0;
+      visibility: hidden;
+    }
+
+    &:hover::before {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(0, -50%);
+    }
+  }
+}
+
+.footer__submenu {
+  margin-top: 1.2rem;
+  font-size: var(--body-s);
+  font-weight: var(--body);
+  color: var(--black-heading);
+
+  .submenu__item:not(:last-child) {
+    margin-bottom: 0.8rem;
+  }
+}
+
+.footer__submenu.submenu-sns {
+  display: flex;
+  gap: 1rem;
+
+  .submenu__item > a {
+    &::before {
+      content: "";
+      display: none;
+    }
+  }
+
+  .submenu__item .img-box {
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    background-color: var(--white);
+    transition: all 0.3s var(--ease-in-out);
+
+    img {
+      width: 3.2rem;
+      aspect-ratio: 1/1;
+      filter: grayscale(1) brightness(0.2);
+      opacity: 0.7;
+      transition: inherit;
+    }
+
+    &:hover {
+      img {
+        opacity: 1;
+        filter: grayscale(0) brightness(1);
+      }
+    }
+  }
+}
+
+.footer__bottom {
+  display: flex;
+  margin-top: 3rem;
+  align-items: center;
+  gap: 1.6rem;
+  color: #444;
+  font-size: var(--body-s);
+}
+
+.bottom__link-box {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.bottom__link a:hover {
+  color: var(--black);
+}
+
+.bottom__copyright {
+  margin-bottom: 1.6rem;
+}
+
+.bottom__text {
+  margin: auto 0 0 auto;
+}
+/* body end */
